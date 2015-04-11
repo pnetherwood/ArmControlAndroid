@@ -1,0 +1,186 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.pauln.armcontrol.ArmButtonsFragment">
+
+    <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:paddingLeft="5dp"
+                    android:splitMotionEvents="true"
+                    android:paddingRight="5dp"
+                    android:paddingTop="10dp"
+                    android:layout_gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/shoulderLabelText"
+            android:id="@+id/textView"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/shoulderRight"
+            android:layout_alignEnd="@+id/shoulderRight"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/baseLabelText"
+            android:id="@+id/textView2"
+            android:layout_alignTop="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/baseCW"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_rotate_acw"
+            android:layout_below="@+id/textView2" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/baseACW"
+            android:src="@drawable/ic_rotate_cw"
+            android:layout_alignTop="@+id/baseCW"
+            android:layout_toRightOf="@+id/baseCW"
+            android:layout_toEndOf="@+id/baseCW" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoulderRight"
+            android:src="@drawable/ic_down"
+            android:layout_alignTop="@+id/shoulderLeft"
+            android:layout_toRightOf="@+id/shoulderLeft"
+            android:layout_toEndOf="@+id/shoulderLeft"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoulderLeft"
+            android:src="@drawable/ic_up"
+            android:layout_alignTop="@+id/baseACW"
+            android:layout_toRightOf="@+id/baseACW"
+            android:layout_toEndOf="@+id/baseACW"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/elbowLabelText"
+            android:id="@+id/textView3"
+            android:layout_below="@+id/baseCW"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/wristLabelText"
+            android:id="@+id/textView4"
+            android:layout_below="@+id/shoulderRight"
+            android:layout_alignRight="@+id/wristDown"
+            android:layout_alignEnd="@+id/wristDown"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/elbowUp"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_up" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/elbowDown"
+            android:layout_alignTop="@+id/elbowUp"
+            android:layout_alignLeft="@+id/baseACW"
+            android:layout_alignStart="@+id/baseACW"
+            android:src="@drawable/ic_down" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wristDown"
+            android:src="@drawable/ic_down"
+            android:layout_below="@+id/textView4"
+            android:layout_alignLeft="@+id/textView"
+            android:layout_alignStart="@+id/textView"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wristUp"
+            android:src="@drawable/ic_up"
+            android:layout_alignTop="@+id/wristDown"
+            android:layout_alignLeft="@+id/shoulderLeft"
+            android:layout_alignStart="@+id/shoulderLeft"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/gripperLabelText"
+            android:id="@+id/textView5"
+            android:layout_below="@+id/elbowUp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/lightLabelText"
+            android:id="@+id/textView6"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_alignRight="@+id/wristDown"
+            android:layout_alignEnd="@+id/wristDown" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gripperOpen"
+            android:layout_below="@+id/textView5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_open" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gripperClose"
+            android:layout_alignTop="@+id/gripperOpen"
+            android:layout_alignLeft="@+id/elbowDown"
+            android:layout_alignStart="@+id/elbowDown"
+            android:src="@drawable/ic_close" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lightOn"
+            android:layout_alignTop="@+id/gripperClose"
+            android:layout_alignLeft="@+id/wristUp"
+            android:layout_alignStart="@+id/wristUp"
+            android:src="@drawable/ic_on" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lightOff"
+            android:layout_alignTop="@+id/lightOn"
+            android:layout_toRightOf="@+id/lightOn"
+            android:layout_toEndOf="@+id/lightOn"
+            android:src="@drawable/ic_off" />
+    </RelativeLayout>
+
+</FrameLayout>

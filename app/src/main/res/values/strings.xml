@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Arm Control</string>
+    <string name="title_activity_arm_control_settings">Arm Control</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_reconnect">Reconnect</string>
+    <string name="shoulderLabelText">Shoulder</string>
+    <string name="baseLabelText">Base</string>
+    <string name="action_stop">Stop</string>
+    <string name="elbowLabelText">Elbow</string>
+    <string name="wristLabelText">Wrist</string>
+    <string name="gripperLabelText">Gripper</string>
+    <string name="lightLabelText">Light</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

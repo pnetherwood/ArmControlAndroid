@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:splitMotionEvents="true"
+              android:orientation="horizontal">
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.pauln.armcontrol.ArmButtonsFragment"
+        android:id="@+id/armFragment"
+        tools:layout="@layout/fragment_arm_buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_margin="10dp"/>
+
+    <WebView
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:id="@+id/webView"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/moveFragment"
+        android:layout_toStartOf="@+id/moveFragment"
+        android:layout_marginTop="30dp"/>
+
+    <fragment
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:name="com.pauln.armcontrol.MoveButtonsFragment"
+        android:id="@+id/moveFragment"
+        tools:layout="@layout/fragment_move_buttons"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="10dp"/>
+
+</RelativeLayout>

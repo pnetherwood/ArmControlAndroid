@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory android:title="Arm Settings">
+        <EditTextPreference android:title="Arm Host"
+                            android:summary="192.168.1.80"
+                            android:key="host"
+                            android:defaultValue="192.168.1.80" />
+        <EditTextPreference android:title="Port"
+                            android:key="port"
+                            android:summary="5000"
+                            android:defaultValue="5000" />
+        <EditTextPreference android:title="Video Stream Address"
+                            android:key="stream"
+                            android:summary="http://192.168.1.80:8080/stream"
+                            android:defaultValue="http://192.168.1.80:8080/stream" />
+    </PreferenceCategory>
+</PreferenceScreen>

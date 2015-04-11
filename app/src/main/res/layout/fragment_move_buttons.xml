@@ -1,0 +1,64 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             tools:context="com.pauln.armcontrol.MoveButtonsFragment"
+             android:paddingTop="10dp">
+
+
+    <RelativeLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moveLeftButton"
+            android:src="@drawable/ic_left"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/moveBackButton"
+            android:layout_toStartOf="@+id/moveBackButton"
+            android:layout_marginTop="24dp"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moveBackButton"
+            android:src="@drawable/ic_down"
+            android:layout_below="@+id/moveForwardButton"
+            android:layout_alignLeft="@+id/moveForwardButton"
+            android:layout_alignStart="@+id/moveForwardButton"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moveRightButton"
+            android:src="@drawable/ic_right"
+            android:layout_gravity="right|center_vertical"
+            android:layout_alignTop="@+id/moveLeftButton"
+            android:layout_toRightOf="@+id/moveBackButton"
+            android:layout_toEndOf="@+id/moveBackButton"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/moveForwardButton"
+            android:src="@drawable/ic_up"
+            android:layout_gravity="right|top"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"/>
+
+        <SeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/speedBar"
+            android:layout_below="@+id/moveBackButton"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:max="9"
+            android:progress="5"
+            />
+    </RelativeLayout>
+
+</FrameLayout>
