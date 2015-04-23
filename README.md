@@ -1,13 +1,15 @@
-# ArmControlAndroid
-Android remote control app for arm robot running on Raspberry Pi
+# Arm Control Android
+Android remote control app for arm robot running on Raspberry Pi with Python cokect server. Socket server code that runs on the Raspberry Pi is also on GitHub at https://github.com/pnetherwood/ArmControlPiPython.
 
 Trying it Out
 =============
 
-Download the APK an install on your phone/tablet. It requires INTERNET_PERMISSION to allow it to communicate with the Python server runnong on the Pi.
+Download the APK and install on your phone/tablet. You need to allow installs from unknown sources in your settings. The app requires INTERNET_PERMISSION to allow it to communicate with the Python server running on the Pi.
 For instructions of setting up the Python server see https://github.com/pnetherwood/ArmControlPiPython
 
-After launching the app for the first time you will need to enter the settings menu to set the IP address or hostname of the Raspberry Pi. Setup the Pi with the static IP address to ensure the app finds the Pi each time.
+After launching the app for the first time you will need to enter the settings menu to set the IP address or hostname of the Raspberry Pi. Setup the Pi with the static IP address to ensure the app finds the Pi each time. When the app connects to Python server, the IP address of the phone/tablet is shown in the logging output of the server. Failing to connect is normally down to your wifi network. Make sure the Pi and the phone/tablet have good connections on the same network.
+
+Other items on the action bar is Refresh which tries to reconnect to the server, Stop which is an emmergency stop if the last finger up command was not received i.e the robot doesn't stop moving.
 
 Building
 ========
